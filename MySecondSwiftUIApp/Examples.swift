@@ -258,6 +258,124 @@
      }
  }
  *************************************
+ struct ContentView: View {
+     
+     @State private var showingAlert = false
+
+     
+     var body: some View {
+         Button(action: {
+             self.showingAlert = true
+         }) {
+             Text("Show alert")
+         }.alert(isPresented: $showingAlert) {
+          Alert(title: Text("Are you shure you want to delete this?"),
+                message: Text("There is no way back!"),
+                primaryButton: .destructive(Text("Delete")) {
+                 print("Deleting...")
+                },
+                secondaryButton: Alert.Button.cancel())
+         }
+     }
+ }
+ *************************************
+ struct ContentView: View {
+     
+     @State private var showingSheet = false
+     
+     
+     var body: some View {
+         Button(action: {
+             self.showingSheet = true
+         }) {
+             Text("Show action sheet")
+         }.actionSheet(isPresented: $showingSheet) {
+             ActionSheet(title: Text("What do you want to do?"), message: Text("There is only one choise"), buttons: [.cancel(), .default(Text("Some default button")), .destructive(Text("Мати моя рідна"))])
+         }
+     }
+ }
+ *************************************
+ struct ContentView: View {
+     
+     @State private var useGreenText = false
+     
+     
+     var body: some View {
+         Button("Анна, доця моя ❤️") {
+             self.useGreenText.toggle()
+         }.foregroundColor(useGreenText ? .blue : .green)
+         .font(useGreenText ? .headline : .largeTitle)
+     }
+ }
+ *************************************
+ struct CustomText: View {
+     var name: String
+     
+     var body: some View {
+         Text(name)
+             .font(.largeTitle)
+             .padding()
+             .foregroundColor(.orange)
+             .background(Color.gray)
+     }
+ }
+
+ struct ContentView: View {
+     
+     var body: some View {
+         VStack(spacing: 20) {
+             CustomText(name: "First text")
+             CustomText(name: "Second text")
+         }
+     }
+ }
+ *************************************
+ struct CustomModifier: ViewModifier {
+     func body(content: Content) -> some View {
+         content
+             .font(.caption2)
+             .padding(10)
+             .overlay(
+                 RoundedRectangle(cornerRadius: 15)
+                     .stroke(lineWidth: 1)
+             )
+             .foregroundColor(Color.blue)
+     }
+ }
+
+ struct CustomTextModifier: ViewModifier {
+     func body(content: Content) -> some View {
+         content
+             .font(.largeTitle)
+             .padding()
+             .foregroundColor(.orange)
+             .background(Color.gray)
+     }
+ }
+
+ extension View {
+     func customM() -> some View {
+         modifier(CustomTextModifier())
+     }
+ }
+ struct ContentView: View {
+     
+     var body: some View {
+         Text("hello, swiftUI")
+         customM()
+     }
+ }
+ //struct ContentView: View {
+ //
+ //    var body: some View {
+ //        Text("hello, swiftUI")
+ //            .modifier(CustomTextModifier())
+ //    }
+ //}
+ *************************************
+ *************************************
+ *************************************
+ *************************************
  *************************************
  
  */

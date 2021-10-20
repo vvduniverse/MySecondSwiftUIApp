@@ -7,34 +7,25 @@
 
 import SwiftUI
 
-struct CarMakerRow: View {
-    var name: String
-    
-    var body: some View {
-        Text("Car maker: \(name)")
-    }
-}
 
 struct ContentView: View {
     var body: some View {
-        List {
-            CarMakerRow(name: "Tesla")
-            CarMakerRow(name: "Audi")
-            CarMakerRow(name: "Porsche")
-            CarMakerRow(name: "ZAZ")
+        NavigationView{
+            Text("Learning SwiftUI")
+                .navigationBarTitle("Welcome", displayMode: .inline)
+                .navigationBarItems(leading:
+                                        HStack {
+                                            Button("Edit") {
+                                                print("Button edit tapped")
+                                            }
+                                            Button("Cancel") {
+                                                print("Button cancel tapped")
+                                            }
+                                        }
+                )
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
 
 
 

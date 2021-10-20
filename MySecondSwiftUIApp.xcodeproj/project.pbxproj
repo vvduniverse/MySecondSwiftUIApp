@@ -11,6 +11,7 @@
 		A077F27D2720022A00358ABA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A077F27C2720022A00358ABA /* ContentView.swift */; };
 		A077F27F2720022C00358ABA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A077F27E2720022C00358ABA /* Assets.xcassets */; };
 		A077F2822720022C00358ABA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A077F2812720022C00358ABA /* Preview Assets.xcassets */; };
+		A077F28A2720076100358ABA /* Examples.swift in Sources */ = {isa = PBXBuildFile; fileRef = A077F2892720076100358ABA /* Examples.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		A077F27E2720022C00358ABA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A077F2812720022C00358ABA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A077F2832720022C00358ABA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A077F2892720076100358ABA /* Examples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Examples.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 			children = (
 				A077F27A2720022A00358ABA /* MySecondSwiftUIAppApp.swift */,
 				A077F27C2720022A00358ABA /* ContentView.swift */,
+				A077F2892720076100358ABA /* Examples.swift */,
 				A077F27E2720022C00358ABA /* Assets.xcassets */,
 				A077F2832720022C00358ABA /* Info.plist */,
 				A077F2802720022C00358ABA /* Preview Content */,
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A077F27D2720022A00358ABA /* ContentView.swift in Sources */,
+				A077F28A2720076100358ABA /* Examples.swift in Sources */,
 				A077F27B2720022A00358ABA /* MySecondSwiftUIAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

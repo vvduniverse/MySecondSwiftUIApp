@@ -7,12 +7,39 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct CarMakerRow: View {
+    var name: String
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        Text("Car maker: \(name)")
     }
 }
+
+struct ContentView: View {
+    var body: some View {
+        List {
+            CarMakerRow(name: "Tesla")
+            CarMakerRow(name: "Audi")
+            CarMakerRow(name: "Porsche")
+            CarMakerRow(name: "ZAZ")
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
